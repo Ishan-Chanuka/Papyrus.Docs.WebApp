@@ -1,0 +1,20 @@
+* {
+    padding: 10px;
+}
+
+.carosal-img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35vh;
+}
+
+.carousel-item:nth-child(1) .carosal-img{
+    background-image: url("../../assets/login-back.jpg");
+}
+.carousel-item:nth-child(2) .carosal-img{
+    background-image: url("../../assets/login-back.jpg");
+}
+.carousel-item:nth-child(3) .carosal-img{
+    background-image: url("../../assets/login-back.jpg");
+}

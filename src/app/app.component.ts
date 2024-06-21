@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavigationBarComponent } from "./components/navigation-bar/navigation-bar.component";
+import { NgIf } from '@angular/common';
+import { Router, RouterOutlet, RouterModule } from '@angular/router';
+import { NavbarComponent } from './components/common/navbar/navbar.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, NavigationBarComponent]
+    imports: [RouterOutlet, RouterModule, NavbarComponent, NgIf]
 })
 export class AppComponent {
   title = 'papyrus.docs.webapp';
+
+  constructor(private router: Router) {}
+
+  isLoginRoute(): boolean{
+    return this.router.url == '/'
+  }
 }
