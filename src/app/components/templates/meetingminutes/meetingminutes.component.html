@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12">
+            <div>
+                <div>
+                    <app-card>
+                        <form (ngSubmit)="onSubmit()">
+                            <div>
+                                <h3>Meeting Details</h3>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="meetingdDate" class="form-label">Meeting Date:</label>
+                                        <input type="text" class="form-control" id="meetingdDate" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="meetingNo" class="form-label">Meeting No:</label>
+                                        <input type="text" class="form-control" id="meetingNo" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="meetingNo" class="form-label">Discussion Points:</label>
+                                    <app-texteditor id="meetingNo"></app-texteditor>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <label class="form-label">Attendees</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected value="1">Ishan</option>
+                                            <option value="2">Kasun</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100">Export</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </app-card>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-12 col-sm-12">
+            <div>
+                <div>
+                    <app-card>
+                        <div class="meeting-minutes">
+                            <div class="header">
+                                <h2>Meeting Minutes</h2>
+                                <p>Date: </p>
+                                <p>Meeting Number: </p>
+                            </div>
+
+                            <div class="body">
+                                <h3>Discussion Points</h3>
+                                <div [innerHTML]="discussionPoints"></div>
+                                <h3>Attendance</h3>
+                                <ul>
+                                    <li>Ishan</li>
+                                    <li>Kasun</li>
+                                </ul>
+                            </div>
+
+                            <div class="footer">
+                                <p>Follow us on:</p>
+                                <a>Social Link 1</a>
+                                <a>Social Link 2</a>
+                                <!-- Additional social links -->
+                                <div class="styling-elements">
+                                    <!-- Include any colourful shapes or lines here -->
+                                </div>
+                            </div>
+                        </div>
+                    </app-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

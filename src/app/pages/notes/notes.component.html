@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div>
+        <div class="row">
+            <h2>Personal Notes</h2>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <app-texteditor></app-texteditor>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <app-card>
+                    <form>
+                        <div>
+                            <h3>Export Settings</h3>
+                            <div class="row">
+                                <div class="col align-middle">
+                                    <label for="formGroupExampleInput" class="form-label">Export to</label>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="server" checked>
+                                        <label class="form-check-label" for="server">
+                                            Server
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="drive">
+                                        <label class="form-check-label" for="drive">
+                                            Drive
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="device">
+                                        <label class="form-check-label" for="device">
+                                            Device
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="validationCustom03" class="form-label">File Type</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected value="1">PDF</option>
+                                        <option value="2">DOCX</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="validationCustom04" class="form-label">File Name</label>
+                                    <input type="text" class="form-control" id="validationCustom04" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">Export</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </app-card>
+            </div>
+        </div>
+    </div>
+</div>

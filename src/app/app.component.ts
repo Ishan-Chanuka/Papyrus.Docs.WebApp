@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { Component, NgModule } from '@angular/core';
+import { NgIf, NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet, RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
 
@@ -8,7 +9,7 @@ import { NavbarComponent } from './components/common/navbar/navbar.component';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, RouterModule, NavbarComponent, NgIf]
+    imports: [RouterOutlet, RouterModule, NavbarComponent, NgIf, NgFor]
 })
 export class AppComponent {
   title = 'papyrus.docs.webapp';
