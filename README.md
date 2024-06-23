@@ -1,5 +1,7 @@
 # PapyrusDocsWebapp
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dea3cbed-8767-4eee-9a07-f79c86dedca5/deploy-status)](https://app.netlify.com/sites/papyrusdocs/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
 
 ## Development server
