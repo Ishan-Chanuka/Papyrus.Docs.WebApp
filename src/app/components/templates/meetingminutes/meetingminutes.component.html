@@ -9,30 +9,34 @@
                                 <h3>Meeting Details</h3>
                                 <div class="row">
                                     <div class="col">
-                                        <label for="meetingdDate" class="form-label">Meeting Date:</label>
-                                        <input type="text" class="form-control" id="meetingdDate" required>
+                                        <label for="meetingDate" class="form-label">Meeting Date:</label>
+                                        <input type="text" class="form-control" id="meetingDate" required
+                                            [(ngModel)]="meetingDate" name="meetingDate">
                                     </div>
                                     <div class="col">
                                         <label for="meetingNo" class="form-label">Meeting No:</label>
-                                        <input type="text" class="form-control" id="meetingNo" required>
+                                        <input type="text" class="form-control" id="meetingNo" required
+                                            [(ngModel)]="meetingNumber" name="meetingNumber">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label for="meetingNo" class="form-label">Discussion Points:</label>
-                                    <app-texteditor id="meetingNo"></app-texteditor>
+                                    <label for="discussionPoints" class="form-label">Discussion Points:</label>
+                                    <app-texteditor id="discussionPoints" (contentChanged)="discussionPoints = $event"
+                                        name="discussionPoints"></app-texteditor>
                                 </div>
                                 <div class="row">
                                     <div>
                                         <label class="form-label">Attendees</label>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected value="1">Ishan</option>
-                                            <option value="2">Kasun</option>
+                                        <select class="form-select" aria-label="Default select example"
+                                            [(ngModel)]="newAttendee" name="newAttendee">
+                                            <option selected value="Ishan">Ishan</option>
+                                            <option value="Kasun">Kasun</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <button type="submit" class="btn btn-primary w-100">Export</button>
+                                        <button (click)="exportAsPDF()" type="submit" class="btn btn-primary w-100">Export</button>
                                     </div>
                                 </div>
                             </div>
@@ -43,32 +47,30 @@
         </div>
         <div class="col-lg-7 col-md-12 col-sm-12">
             <div>
-                <div>
+                <div class="template">
                     <app-card>
-                        <div class="meeting-minutes">
-                            <div class="header">
-                                <h2>Meeting Minutes</h2>
-                                <p>Date: </p>
-                                <p>Meeting Number: </p>
-                            </div>
-
-                            <div class="body">
-                                <h3>Discussion Points</h3>
-                                <div [innerHTML]="discussionPoints"></div>
-                                <h3>Attendance</h3>
-                                <ul>
-                                    <li>Ishan</li>
-                                    <li>Kasun</li>
-                                </ul>
-                            </div>
-
-                            <div class="footer">
-                                <p>Follow us on:</p>
-                                <a>Social Link 1</a>
-                                <a>Social Link 2</a>
-                                <!-- Additional social links -->
-                                <div class="styling-elements">
-                                    <!-- Include any colourful shapes or lines here -->
+                        <div class="meeting-minutes p-4" #pdfContent>
+                            <div>
+                                <div class="header mb-4">
+                                    <h2 class="mb-3">Meeting Minutes</h2>
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <p><strong>Date:</strong> {{ meetingDate }}</p>
+                                        </div>
+                                        <div>
+                                            <p><strong>Meeting Number:</strong> {{ meetingNumber }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="body mb-4">
+                                    <h5 class="mb-3">Discussed Points</h5>
+                                    <div [innerHTML]="discussionPoints"></div>
+                                </div>
+                                <div class="footer">
+                                    <h3 class="mb-3">Attendance</h3>
+                                    <ul class="list-unstyled d-flex flex-wrap">
+                                        <li *ngFor="let attendee of attendanceList" class="mb-2 me-3">{{ attendee }}</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
