@@ -1,0 +1,79 @@
+* div {
+    padding: 10px;
+}
+
+.meeting-minutes {
+    border: 1px solid #ffffff;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+.header,
+.footer {
+    text-align: center;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.body h3 {
+    margin-top: 20px;
+}
+
+.footer p,
+.footer a {
+    margin: 0;
+}
+
+:host ::ng-deep .content-editor {
+    height: 20vh !important;
+}
+
+
+.template{
+    max-height: 85vh; 
+    overflow-y: auto;
+}
+
+/* Template styling */
+
+.meeting-minutes {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meeting-minutes .header, .meeting-minutes .body, .meeting-minutes .footer {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .meeting-minutes h2, .meeting-minutes h3 {
+    color: #343a40;
+  }
+  
+  .meeting-minutes p, .meeting-minutes ul, .meeting-minutes a {
+    color: #6c757d;
+  }
+  
+  .meeting-minutes a {
+    text-decoration: none;
+  }
+  
+  .meeting-minutes .list-unstyled li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .meeting-minutes .list-unstyled li:before {
+    content: "\2022";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1.5rem;
+  }

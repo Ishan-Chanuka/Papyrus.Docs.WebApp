@@ -1,0 +1,16 @@
+* div {
+    padding: 10px;
+}
+
+p h3 {
+    padding: 0px !important;
+}
+
+:host ::ng-deep .content-editor {
+    height: 50vh !important;
+}
+
+.align-middle {
+    display: flex;
+    align-items: center;
+}

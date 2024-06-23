@@ -1,0 +1,67 @@
+* {
+    padding: 10px;
+}
+
+.document-card-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 8rem;
+    margin-top: 0px;
+    height: 10rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* row one */
+.r1:nth-child(1) .document-card-img,
+.r1:nth-child(1) .document-card-img,
+.r1:nth-child(1) .document-card-img  {
+    background-image: url("../../assets/email.png");
+}
+
+.r1:nth-child(2) .document-card-img,
+.r1:nth-child(2) .document-card-img,
+.r1:nth-child(2) .document-card-img {
+    background-image: url("../../assets/meet.png");
+}
+
+.r1:nth-child(3) .document-card-img,
+.r1:nth-child(3) .document-card-img,
+.r1:nth-child(3) .document-card-img {
+    background-image: url("../../assets/seo-report.png");
+}
+
+.r1:nth-child(4) .document-card-img,
+.r1:nth-child(4) .document-card-img,
+.r1:nth-child(4) .document-card-img {
+    background-image: url("../../assets/wages.png");
+}
+
+/* row two */
+
+.r2:nth-child(1) .document-card-img,
+.r2:nth-child(1) .document-card-img,
+.r2:nth-child(1) .document-card-img  {
+    background-image: url("../../assets/google-drive.png");
+}
+
+.r2:nth-child(2) .document-card-img,
+.r2:nth-child(2) .document-card-img,
+.r2:nth-child(2) .document-card-img {
+    background-image: url("../../assets/folder.png");
+}
+
+.r2:nth-child(3) .document-card-img,
+.r2:nth-child(3) .document-card-img,
+.r2:nth-child(3) .document-card-img {
+    background-image: url("../../assets/conversation.png");
+}
+
+.r2:nth-child(4) .document-card-img,
+.r2:nth-child(4) .document-card-img,
+.r2:nth-child(4) .document-card-img {
+    background-image: url("../../assets/notes.png");
+}
