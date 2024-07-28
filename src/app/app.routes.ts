@@ -3,9 +3,9 @@ import { DocumentsComponent } from './pages/documents/documents.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { TexteditorComponent } from './components/texteditor/texteditor.component';
 import { NotesComponent } from './pages/notes/notes.component';
 import { MeetingminutesComponent } from './components/templates/meetingminutes/meetingminutes.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -14,22 +14,27 @@ export const routes: Routes = [
     },
     {
         path: 'documents',
-        component: DocumentsComponent
+        component: DocumentsComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'admin',
-        component: AdminComponent
+        component: AdminComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'notes',
-        component: NotesComponent
+        component: NotesComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'meetingminutes',
-        component: MeetingminutesComponent
+        component: MeetingminutesComponent,
+        canActivate: [authGuard]
     }
 ];
